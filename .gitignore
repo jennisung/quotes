@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+.idea
+=======
 # Created by https://www.gitignore.io/api/java,macos,android,androidstudio
 
 ### Android ###
@@ -209,3 +218,4 @@ Temporary Items
 
 # End of https://www.gitignore.io/api/java,macos,android,androidstudio
 **markdown-navigator.xml
+>>>>>>> b0f119cd76c92e7006fbf296e31adadee4e0ffe4
