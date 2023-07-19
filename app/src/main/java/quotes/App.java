@@ -3,16 +3,19 @@
  */
 package quotes;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.io.IOException;
+import java.util.Optional;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        try {
+            Quotes quotes = new Quotes("./app/src/main/resources/recentquotes.json");
+            Quotes.Quote quote = quotes.getRandomQuote();
+            System.out.println("Quote: " + quote.getText());
+            System.out.println("Author: " + quote.getAuthor());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
-
-
-
 
