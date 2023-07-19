@@ -10,3 +10,6 @@ Use the file recentquotes.json to show random popular book quotes. Your program 
 
 ## Testing
 Use JUnit to write at least one test for each of the Feature Tasks.
+
+## Collaborators
+* Jennifer Sung
