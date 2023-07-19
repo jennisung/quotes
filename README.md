@@ -14,4 +14,4 @@ Use JUnit to write at least one test for each of the Feature Tasks.
 ## Collaborators
 * Jennifer Sung
 * Dylan Cooper
-* Davey
+* Davey Oswald
