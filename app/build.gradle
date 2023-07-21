@@ -58,6 +58,7 @@ tasks.named('test') {
 }
 
 
+
 task wrapper(type: Wrapper) {
     gradleVersion = '7.2'
 }
@@ -66,12 +67,17 @@ task wrapper(type: Wrapper) {
 
 
 // lab09
-compileJava {
-    sourceCompatibility = '11' // or '17', or any compatible version you prefer
-    targetCompatibility = '11' // or '17', or any compatible version you prefer
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+//compileJava {
+//    sourceCompatibility = '11' // or '17', or any compatible version you prefer
+//    targetCompatibility = '11' // or '17', or any compatible version you prefer
+//}
+//
+//java {
+//    sourceCompatibility = JavaVersion.VERSION_17
+//    targetCompatibility = JavaVersion.VERSION_17
+//}
+//java {
+//    toolchain {
+//        languageVersion.set(JavaLanguageVersion.of(11))
+//    }
+//}
