@@ -38,6 +38,15 @@ We used JUnit to write tests for our application. We have tests that verify that
 
 To run the tests, navigate to the root directory of the project in your terminal and run the command ```./gradlew test```.
 
+
+# Lab 09: Quotes API
+## Testing
+We used JUnit to write tests for our application. We have tests that verify that our application correctly parses the JSON data and correctly displays a random quote.
+
+To run the tests, navigate to the root directory of the project in your terminal and run the command ```./gradlew test```.
+
+
+
 ### Collaborators
 - Jennifer Sung
 - Dylan Cooper
