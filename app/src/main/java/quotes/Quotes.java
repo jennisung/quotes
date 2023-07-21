@@ -3,8 +3,7 @@ package quotes;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Random;
@@ -12,23 +11,17 @@ import java.util.Random;
 public class Quotes {
     private List<Quote> listOfQuotes;
 
-//    public Quotes(String filePath) throws IOException {
-//        Gson gsonParser = new Gson();
-//        Type listTypeForQuotes = new TypeToken<List<Quote>>(){}.getType();
-//        FileReader fileReaderForQuotes = new FileReader(filePath);
-//        this.listOfQuotes = gsonParser.fromJson(fileReaderForQuotes, listTypeForQuotes);
-//    }
-
     public Quotes(String filePath) throws IOException {
-    Gson gsonParser = new Gson();
-    Type listTypeForQuotes = new TypeToken<List<Quote>>(){}.getType();
-    FileReader fileReaderForQuotes = new FileReader(filePath);
-    try {
-        this.listOfQuotes = gsonParser.fromJson(fileReaderForQuotes, listTypeForQuotes);
-    } finally {
-        fileReaderForQuotes.close();
+        Gson gsonParser = new Gson();
+        Type listTypeForQuotes = new TypeToken<List<Quote>>(){}.getType();
+        FileReader fileReaderForQuotes = new FileReader(filePath);
+        try {
+            this.listOfQuotes = gsonParser.fromJson(fileReaderForQuotes, listTypeForQuotes);
+        } finally {
+            fileReaderForQuotes.close();
+        }
     }
-}
+
 
     public Quote getRandomQuote() {
         Random randomNumberGenerator = new Random();
@@ -58,7 +51,7 @@ public class Quotes {
     }
 }
 
-// package quotes;
+
 //import com.google.gson.Gson;
 //import com.google.gson.reflect.TypeToken;
 //
@@ -71,19 +64,34 @@ public class Quotes {
 //public class Quotes {
 //    private List<Quote> listOfQuotes;
 //
+////    public Quotes(String filePath) throws IOException {
+////        Gson gsonParser = new Gson();
+////        Type listTypeForQuotes = new TypeToken<List<Quote>>(){}.getType();
+////        FileReader fileReaderForQuotes = new FileReader(filePath);
+////        this.listOfQuotes = gsonParser.fromJson(fileReaderForQuotes, listTypeForQuotes);
+////    }
+//
 //    public Quotes(String filePath) throws IOException {
-//        Gson gsonParser = new Gson();
-//        Type listTypeForQuotes = new TypeToken<List<Quote>>(){}.getType();
-//        FileReader fileReaderForQuotes = new FileReader(filePath);
+//    Gson gsonParser = new Gson();
+//    Type listTypeForQuotes = new TypeToken<List<Quote>>(){}.getType();
+//    FileReader fileReaderForQuotes = new FileReader(filePath);
+//    try {
 //        this.listOfQuotes = gsonParser.fromJson(fileReaderForQuotes, listTypeForQuotes);
+//    } finally {
+//        fileReaderForQuotes.close();
 //    }
+//}
 //
 //    public Quote getRandomQuote() {
 //        Random randomNumberGenerator = new Random();
 //        return listOfQuotes.get(randomNumberGenerator.nextInt(listOfQuotes.size()));
 //    }
 //
-//    public class Quote {
+//    public List<Quote> getListOfQuotes() {
+//        return listOfQuotes;
+//    }
+//
+//    public static class Quote {
 //        private String author;
 //        private String text;
 //
@@ -101,4 +109,3 @@ public class Quotes {
 //        }
 //    }
 //}
-
